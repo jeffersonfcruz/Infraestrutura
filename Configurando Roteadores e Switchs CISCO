@@ -59,8 +59,9 @@ Desabilita o modo de Execução
 				!EXEC-TIMEOUT ()
 				Definir um Tempo de Sessão
 				
-end
-Sair de Todos os niveis 
-!EXIT
-    Sair
+    !END
+    Voltar ao modo de execução Diretamente
+    !EXIT
+    Sair e voltar ao Ultimo nivel
+
 
