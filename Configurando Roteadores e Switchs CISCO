@@ -43,19 +43,21 @@ Desabilita o modo de Execução
 
                 !USERNAME (usuario) PASSWORD (senha)
                 Define um Usuario e uma senha de Criptografia Tipo-7
-                
-line console 0
-entrar em nivel configuração da porta console
-			login local
-			entrar com o usuario
-				logging synchronous
-				definir uma sincronia entre os logs				
+
+                !LINE CONSOLE 0
+                entrar em nivel configuração da porta console
+			    
+                !LOGIN LOCAL
+                Forçar a Fazer Autenticação com Logins Locais do Switch
+			    
+				!LOGGING SYNCHRONOUS
+				Sincronizar as Mensagens de Log na Tela			
 				
-				password 
-				define uma senha para o console mesmo sem usuario
+				!PASSWORD
+				define uma senha de Criptografia 
 				
-				exec-timeout
-				tempo de sessão
+				!EXEC-TIMEOUT ()
+				Definir um Tempo de Sessão
 				
 end
 Sair de Todos os niveis 
