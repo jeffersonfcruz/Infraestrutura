@@ -1,28 +1,37 @@
-enable
-	Habilitar o modo de Execução
-disable
-	Desabilita o modo de Execução
-	            
-                Configure terminal
-		            Habilitar o Modo de configuração Global
-	            
-                Hostname (nome do dispositivo)
-		        Altera o nome do dispositivo
-		CTRL+Z 
-		Sai da configuração global
-	Interface 
-	configuração interface
-				description Interface de Gateway da LAN
-				ip adress
-				configurar ips e mascara de rede
-	copy running-config startup-config
-		Salva as Configurações
-exit
-		Sair
 
-Service Password-encryption
-		Criptografa a Senha
-no ip domain-lookup
+
+    !ENABLE
+	Habilitar o modo de Execução
+!DISABLE
+Desabilita o modo de Execução
+	            
+                !CONFIGURE TERMINAL
+		        Habilitar o Modo de configuração Global
+	            
+		        CTRL+Z 
+		        Sai da configuração global
+	            
+                !HOSTNAME (nome do dispositivo)
+		        Altera o nome do dispositivo
+                
+                !INTERFACE (Porta)
+	            entra em modo de configuração da interface (rede)
+                        
+                        !DESCRIPTION Interface de Gateway da LAN
+                        Informa uma Breve Descrição da Porta que irá ser Configurada
+
+                        !IP ADRESS (IP + SUB MASK)
+				        Configurar IP e Máscara de Rede para o dispositivo
+
+    !COPY RUNNING-CONFIG STARTUP-CONFIG
+	Salva as Configurações
+!EXIT
+Sair
+
+                !SERVICE PASSWORD-ENCRYPTION
+		        Criptografa a Senha
+                !NO IP DOMAIN-LOOKUP
+                
 		
 banner motd #mensagem que queira#
 		Mensagem
