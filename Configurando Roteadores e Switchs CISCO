@@ -25,22 +25,25 @@ Desabilita o modo de Execução
 
     !COPY RUNNING-CONFIG STARTUP-CONFIG
 	Salva as Configurações
-!EXIT
-Sair
+    
 
                 !SERVICE PASSWORD-ENCRYPTION
 		        Criptografa a Senha
                 !NO IP DOMAIN-LOOKUP
-                
+
 		
-banner motd #mensagem que queira#
-		Mensagem
-enable secret (senha)
-senha para entrar em modo de execução
+                !BANNER MOTD #""#
+		        Mensagem de inicialização do Dispositivo
+                
+                !ENABLE SECRET (senha)
+                Define uma senha para entrar em modo de execução
 
-username (usuario)
-secret (senha)
+                !USERNAME (usuario) SECRET (senha)
+                Define um Usuario e uma senha de Criptografia Tipo-5
 
+                !USERNAME (usuario) PASSWORD (senha)
+                Define um Usuario e uma senha de Criptografia Tipo-7
+                
 line console 0
 entrar em nivel configuração da porta console
 			login local
@@ -56,5 +59,6 @@ entrar em nivel configuração da porta console
 				
 end
 Sair de Todos os niveis 
-
+!EXIT
+    Sair
 
