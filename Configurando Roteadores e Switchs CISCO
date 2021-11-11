@@ -12,25 +12,11 @@ Desabilita o modo de Execução
 		        Sai da configuração global
 	            
                 !HOSTNAME (nome do dispositivo)
-		        Altera o nome do dispositivo
-                
-                !INTERFACE (Porta)
-	            entra em modo de configuração da interface (rede)
-                        
-                        !DESCRIPTION Interface de Gateway da LAN
-                        Informa uma Breve Descrição da Porta que irá ser Configurada
-
-                        !IP ADRESS (IP + SUB MASK)
-				        Configurar IP e Máscara de Rede para o dispositivo
-
-    !COPY RUNNING-CONFIG STARTUP-CONFIG
-	Salva as Configurações
-    
+		        Altera o nome do dispositivo    
 
                 !SERVICE PASSWORD-ENCRYPTION
 		        Criptografa a Senha
                 !NO IP DOMAIN-LOOKUP
-
 		
                 !BANNER MOTD #""#
 		        Mensagem de inicialização do Dispositivo
@@ -58,10 +44,23 @@ Desabilita o modo de Execução
 				
 				!EXEC-TIMEOUT ()
 				Definir um Tempo de Sessão
+
+                !INTERFACE (Porta)
+	            entra em modo de configuração da interface (rede)
+                        
+                        !DESCRIPTION Interface de Gateway da LAN
+                        Informa uma Breve Descrição da Porta que irá ser Configurada
+
+                        !IP ADRESS (IP + SUB MASK)
+				        Configurar IP e Máscara de Rede para o dispositivo
 				
     !END
     Voltar ao modo de execução Diretamente
+    
     !EXIT
     Sair e voltar ao Ultimo nivel
 
+    !COPY RUNNING-CONFIG STARTUP-CONFIG
+	Salva as Configurações
+    
 
