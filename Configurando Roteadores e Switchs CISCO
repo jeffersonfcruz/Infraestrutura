@@ -9,7 +9,7 @@
 		    Habilitar o Modo de configuração Global
 	            	            
             !HOSTNAME (nome do dispositivo)
-		        Altera o nome do dispositivo    
+		    Altera o nome do dispositivo    
 
             !SERVICE PASSWORD-ENCRYPTION
 		    Criptografa a Senha
