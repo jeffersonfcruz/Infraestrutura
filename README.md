@@ -31,41 +31,46 @@ Estudo sobre Infraestrutura de Redes
 		
 			USERNAME (usuario) PASSWORD (senha)
 			Define um Usuario e uma senha de Criptografia Tipo-7
-		
-			INTERFACE (Porta)
-			entra em modo de configuração da interface (rede)
 			
 			IP DOMAIN-NAME (nome do dominio.X)
 			Define um nome para o Dominio
+				
+				INTERFACE (Porta)
+				Entrar em modo de configuração da interface (rede)
+                                
+                                        IP ADRESS (IP + SUB MASK)
+		    		        Configurar IP e Máscara de Rede para o dispositivo
 		
 				LINE CONSOLE 0
-				entrar em nivel configuração da porta console
+				Entrar em nivel de configuração da porta console
 		
-				LOGIN LOCAL
-                		Forçar a Fazer Autenticação com Logins Locais do Switch
-		
-				LOGGING SYNCHRONOUS
-	        		Sincronizar as Mensagens de Log na Tela
-		
-				PASSWORD
-				define uma senha de Criptografia
+				        ($1) LOGIN LOCAL
+                		        Forçar a Fazer Autenticação com Logins Locais do Switch
+                                        
+                                        ($2) PASSWORD
+				        define uma senha de Criptografia
+                                        
+                                        ($3) LOGGING SYNCHRONOUS
+	        		        Sincronizar as Mensagens de Log na Tela
+                                        
+                                        DESCRIPTION (Descrição:)
+                                        Informa uma Breve Descrição da Porta que irá ser Configurada			        
 		    
-		    		EXEC-TIMEOUT ()
-				Definir um Tempo de Sessão
-		    
-		    		DESCRIPTION (Descrição:)
-		    		Informa uma Breve Descrição da Porta que irá ser Configurada
-		    
-		    		IP ADRESS (IP + SUB MASK)
-		    		Configurar IP e Máscara de Rede para o dispositivo
+		    		        ($4) EXEC-TIMEOUT ()
+				        Definir um Tempo de Sessão
 				
 				-/-
 				
 				LINE VTY (Quantidade de Linhas que será Disponivel (0,15)
 				As linhas vty permitem acesso a um dispositivo Cisco via Telnet
-				
-				TRANSPORT INPUT ALL
-				Permite todos os protocolos disponiveis para conexões de entrada para o seu roteador/switchs
+                                        
+                                        ($)
+                                        ($2)
+                                        ($3)
+                                        ($4)
+                                        
+				        TRANSPORT INPUT ALL
+				        Permite todos os protocolos disponiveis para conexões de entrada para o seu roteador/switchs
 				
 				IP DEFAULT-GATEWAY (IP do roteador/Gateway)
 				Define um IP (Gateway) para o Roteador
@@ -73,8 +78,8 @@ Estudo sobre Infraestrutura de Redes
 				INTERFACE VLAN 1
 				Entra em Modo de Configuração de VLAN
 				
-				NO SHUTDOWN
-				Ativa uma Interface/VLAN/Porta
+				        ($5) NO SHUTDOWN
+				        Ativa uma Interface/VLAN/Porta
 				
 				CRYPTO KEY GENERATE RSA GENERAL-KEYS MODULUS 1024
 				> http://deptal.estgp.pt:9090/cisco/ccna1/course/module11/11.2.4.4/11.2.4.4.html
@@ -84,7 +89,9 @@ Estudo sobre Infraestrutura de Redes
 				
 				IP SSH TIME-OUT (segundos)
 				Define um tempo limite para o Protocolo SSH
-				
+                                
+                                IP SSH AUTHENTICATION-RETRIES (numero)
+				Numero de Tentativas de autenticação
 	END
 	Voltar diretamente ao modo de execução
 
