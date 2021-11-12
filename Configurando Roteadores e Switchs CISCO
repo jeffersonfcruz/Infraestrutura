@@ -6,18 +6,18 @@
     Desabilita o modo de Execução
 	            
             CONFIGURE TERMINAL
-		    Habilitar o Modo de configuração Global
+	    Habilitar o Modo de configuração Global
 	            	            
             HOSTNAME (nome do dispositivo)
-		    Altera o nome do dispositivo    
+	    Altera o nome do dispositivo    
 
             SERVICE PASSWORD-ENCRYPTION
-		    Criptografa a Senha
+	    Criptografa a Senha
                 
             NO IP DOMAIN-LOOKUP
-		
-            BANNER MOTD #""#
-		    Mensagem de inicialização do Dispositivo
+	    
+	    BANNER MOTD #""#
+	    Mensagem de inicialização do Dispositivo
                 
             ENABLE SECRET (senha)
             Define uma senha para entrar em modo de execução
@@ -33,24 +33,23 @@
 			    
             LOGIN LOCAL
             Forçar a Fazer Autenticação com Logins Locais do Switch
-			    
-			LOGGING SYNCHRONOUS
-			Sincronizar as Mensagens de Log na Tela			
-				
-			PASSWORD
-			define uma senha de Criptografia 
-			
-			EXEC-TIMEOUT ()
-			Definir um Tempo de Sessão
+	    
+	    LOGGING SYNCHRONOUS
+	    Sincronizar as Mensagens de Log na Tela			
+	    
+	    PASSWORD
+	    define uma senha de Criptografia 
+	    EXEC-TIMEOUT ()
+	    Definir um Tempo de Sessão
 
             INTERFACE (Porta)
-	        entra em modo de configuração da interface (rede)
-                        
-                    DESCRIPTION Interface de Gateway da LAN
-                    Informa uma Breve Descrição da Porta que irá ser Configurada
+	    entra em modo de configuração da interface (rede)
+	    
+	    	DESCRIPTION Interface de Gateway da LAN
+                Informa uma Breve Descrição da Porta que irá ser Configurada
 
-                    IP ADRESS (IP + SUB MASK)
-				    Configurar IP e Máscara de Rede para o dispositivo
+                IP ADRESS (IP + SUB MASK)
+		Configurar IP e Máscara de Rede para o dispositivo
 				
     END
     Voltar ao modo de execução Diretamente
