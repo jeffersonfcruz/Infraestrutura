@@ -46,15 +46,15 @@ Estudo sobre Infraestrutura de Redes
 		
 				        ($1) LOGIN LOCAL
                 		        Forçar a Fazer Autenticação com Logins Locais do Switch
-                                        
-                                        ($2) PASSWORD
+					
+					($2) PASSWORD
 				        define uma senha de Criptografia
-                                        
-                                        ($3) LOGGING SYNCHRONOUS
+					
+					($3) LOGGING SYNCHRONOUS
 	        		        Sincronizar as Mensagens de Log na Tela
-                                        
-                                        DESCRIPTION (Descrição:)
-                                        Informa uma Breve Descrição da Porta que irá ser Configurada			        
+					
+					DESCRIPTION (Descrição:)
+					Informa uma Breve Descrição da Porta que irá ser Configurada			        
 		    
 		    		        ($4) EXEC-TIMEOUT ()
 				        Definir um Tempo de Sessão
@@ -63,11 +63,10 @@ Estudo sobre Infraestrutura de Redes
 				
 				LINE VTY (Quantidade de Linhas que será Disponivel (0,15)
 				As linhas vty permitem acesso a um dispositivo Cisco via Telnet
-                                        
-                                        ($)
-                                        ($2)
-                                        ($3)
-                                        ($4)
+					($)
+					($2)
+					($3)
+					($4)
                                         
 				        TRANSPORT INPUT ALL
 				        Permite todos os protocolos disponiveis para conexões de entrada para o seu roteador/switchs
@@ -78,8 +77,8 @@ Estudo sobre Infraestrutura de Redes
 				INTERFACE VLAN 1
 				Entra em Modo de Configuração de VLAN
 				
-				        ($5) NO SHUTDOWN
-				        Ativa uma Interface/VLAN/Porta
+					($5) NO SHUTDOWN
+					Ativa uma Interface/VLAN/Porta
 				
 				CRYPTO KEY GENERATE RSA GENERAL-KEYS MODULUS 1024
 				> http://deptal.estgp.pt:9090/cisco/ccna1/course/module11/11.2.4.4/11.2.4.4.html
