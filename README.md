@@ -37,9 +37,9 @@ Estudo sobre Infraestrutura de Redes
 				
 				INTERFACE (Porta)
 				Entrar em modo de configuração da interface (rede)
-                                
-                                        IP ADRESS (IP + SUB MASK)
-		    		        Configurar IP e Máscara de Rede para o dispositivo
+				
+					IP ADRESS (IP + SUB MASK)
+					Configurar IP e Máscara de Rede para o dispositivo
 		
 				LINE CONSOLE 0
 				Entrar em nivel de configuração da porta console
