@@ -107,3 +107,26 @@ Estudo sobre Infraestrutura de Redes
 	Mostra os IPs Configurados para a Interface
 	SHOW VLAN BRIEF
 	Mostra os IPs Configurados para a as VLANs
+
+BACKUP DAS CONFIGURAÇÔES SWITCHES
+
+Proprio equipamento
+	ssh -l (usuario) + (ip)
+	show flash:
+	copy running-config startup-config 
+	copy running-config flash:
+	ou
+	copy startup-config flash
+	show flash
+	
+Cópia para o servidor
+	ssh -l (usuario) + (ip)
+	show flash:
+	copy running-config startup-config 
+	copy running-config flash:
+	copy running-config tftp: (ip)
+	
+Cópia para Computador
+	show running-config
+	selecionar ! até end
+	copiar e colar no bloco de notas
