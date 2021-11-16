@@ -107,5 +107,3 @@ Estudo sobre Infraestrutura de Redes
 	Mostra os IPs Configurados para a Interface
 	SHOW VLAN BRIEF
 	Mostra os IPs Configurados para a as VLANs
-	
-..
