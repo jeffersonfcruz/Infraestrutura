@@ -1,7 +1,6 @@
 # Infraestrutura
 Estudo sobre Infraestrutura de Redes
 ## Comandos para configuração de roteadores e switchs CISCO
-
 		ENABLE
 		Habilitar o modo de Execução
 
