@@ -1,0 +1,76 @@
+enable
+		Habilitar o modo de Execução
+disable
+		Desabilita o modo de Execução
+	Configure terminal
+		Habilitar o Modo de configuração Global
+	line vty 0 4
+		login local
+		transport input all
+		
+	
+	
+	Hostname (nome do dispositivo)
+		Altera o nome do dispositivo
+		CTRL+Z 
+		Sai da configuração global
+	interface 
+	configuração interface
+				description Interface de Gateway da LAN
+				ip adress
+				configurar ips e mascara de rede
+	copy running-config startup-config
+		Salva as Configurações
+exit
+		Sair
+
+Service Password-encryption
+		Criptografa a Senha
+no ip domain-lookup
+		
+banner motd #mensagem que queira#
+		Mensagem
+enable secret (senha)
+senha para entrar em modo de execução
+
+username (usuario)
+secret (senha)
+
+line console 0
+entrar em nivel configuração da porta console
+			login local
+			entrar com o usuario
+				logging synchronous
+				definir uma sincronia entre os logs				
+				
+				password 
+				define uma senha para o console mesmo sem usuario
+				
+				exec-timeout
+				tempo de sessão
+				
+end
+Sair de Todos os niveis 
+
+line vty 0 4
+		login local
+		transport input all
+
+ip defaul-gateway (IP roteador(Gateway)
+interface vlan 1
+description Interface
+ip adress 192.168.0.250 255.255.255.0
+no shutdown
+
+
+show ip interface brief
+show vlan brief
+
+ip domain-name (nome do dominio.xxx)
+crypto key generate rsa general-keys modulus 1024
+ip ssh version 2
+ip ssh time-out (segundos)
+
+		
+
+

@@ -8,3 +8,29 @@ HOSTNAME: Nome do computador
 
 Fizemos testes utilizando os HUBS e Brigdes
 Encontramos as falhas
+
+BACKUP DAS CONFIGURAÇÔES SWITCHES
+
+Proprio equipamento
+	ssh -l (usuario) + (ip)
+	show flash:
+	copy running-config startup-config 
+	copy running-config flash:
+	ou
+	copy startup-config flash
+	show flash
+	
+Cópia para o servidor
+	ssh -l (usuario) + (ip)
+	show flash:
+	copy running-config startup-config 
+	copy running-config flash:
+	copy running-config tftp: (ip)
+	
+Cópia para Computador
+	show running-config
+	selecionar ! até end
+	copiar e colar no bloco de notas
+
+Criando uma nova rede (FILIAL) em outro lugar
+novo roteador

@@ -26,7 +26,7 @@ enable
 	configure terminal
 		
 	!Configuração da interface Serial0/0/0
-	interface serial 0/0/0
+	interface serial 0/0/0 (Do meu Grupo para o Proximo)
 	
 		!Descriação da Interface
 		description Interface Grupo-?? para Grupo-??
@@ -34,12 +34,13 @@ enable
 		!Configuração do endereçamento IPv4
 		!Verificar a tabela de endereçamento IPv4 dos Grupos
 		!Sempre vai ser o Endereço IPv4 Impar
-		ip address 192.168.1.??? 255.255.255.252
+		!Interface DCE do seu Grupo
+		ip address 192.168.1.??? 255.255.255.252 (impar)
 		
 		!Configurando o Clock Rate, Velocidade do Link
 		clock rate 64000
 		
-		!Configurando a Largura de Banda
+		!Configurando a Largura de Banda (64000/1000)
 		bandwidth 64
 		
 		!Habilitando a interface
@@ -48,16 +49,17 @@ enable
 		!Saindo das configurações da interface
 		exit
 		
-	!Configuração da interface Serial0/0/1
+	!Configuração da interface Serial0/0/1 (Do Meu grupo Do Anterior) 
 	interface serial 0/0/1
 	
 		!Descriação da Interface
 		description Interface Grupo-?? para Grupo-??
 		
-		!Configuração do endereçamento IPv4
+		!Configuração do endereçamento IPv4 
 		!Verificar a tabela de endereçamento IP dos Grupos
 		!Sempre vai ser o Endereço IPv4 Par
-		ip address 192.168.1.??? 255.255.255.252
+		!Interface DTE do Grupo que está se conectando com o seu Grupo
+		ip address 192.168.1.??? 255.255.255.252 (par)
 		
 		!Configurando a Largura de Banda
 		bandwidth 64
@@ -73,7 +75,12 @@ enable
 	
 !Comandos para visualização das informações:
 show running-config
-show ip interface brief
-show ip route
+show ip interface brief	(Interfaces Seriais precisa está UP UP nos Status)
+show ip route (será criado as rotas fisicamente conectadas das redes)
+
+!Comandos de verificação da sua Interface
 ping 192.168.1.??? (serial 0/0/0)
 ping 192.168.1.??? (serial 0/0/1)
+
+!Testar a comunicação com a Interface do outro Grupo que está conectando com o seu
+ping 192.168.1.??? (IP Impar da Interface serial 0/0/1)
