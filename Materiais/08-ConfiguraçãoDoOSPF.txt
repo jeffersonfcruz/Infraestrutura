@@ -154,13 +154,8 @@ show running-config
 show ip protocols
 show ip interface brief
 show ip route
-show ip route ospf 
-show ip route ospf ??? (ID)
+show ip route ospf
 show ip ospf neighbor
-show ip ospf database
-show ip ospf database router
-show ip ospf ??? (ID)
-show ip ospf interface
 
 !Pingando os dispositivos de Router e Switch de outros Grupos
 ping 172.16.???.254
