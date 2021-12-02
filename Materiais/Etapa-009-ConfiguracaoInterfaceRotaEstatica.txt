@@ -1,0 +1,49 @@
+!Configuração da Interface dos Routers
+!Router 2911 (Lado Direito)
+enable
+	configure terminal
+		interface GigabitEthernet 0/1
+		description Interface de WAN
+		ip address 10.0.0.2 255.255.255.252
+		no shutdown
+		end
+	write
+
+!Router 1941 (Lado Esquerdo)
+enable
+	configure terminal
+		interface GigabitEthernet 0/1
+		description Interface de WAN
+		ip address 10.0.0.1 255.255.255.252
+		no shutdown
+		end
+	write
+
+!Configuração das Rotas Estáticas dos Routers
+!Router 2911 (Lado Direito)
+enable
+	configure terminal
+		ip route 192.168.0.0 255.255.255.0 10.0.0.1
+		end
+	write
+
+!Router 1941 (Lado Esquerdo)
+enable
+	configure terminal
+		ip route 192.168.1.0 255.255.255.0 10.0.0.2
+		end
+	write
+
+!Comando de verificação
+show ip interface brief
+show ip route static
+ping 192.168.0.254
+ping 10.0.0.1
+ping 10.0.0.2
+ping 192.168.1.254
+ping 192.168.1.10
+tracert 192.168.1.10
+
+
+
+	
