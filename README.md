@@ -43,11 +43,11 @@ Estudo sobre Infraestrutura de Redes
 				LINE CONSOLE 0
 				Entrar em nivel de configuração da porta console
 		
-				        ($1) LOGIN LOCAL
-                		        Forçar a Fazer Autenticação com Logins Locais do Switch
+				    ($1) LOGIN LOCAL
+					Forçar a Fazer Autenticação com Logins Locais do Switch
 					
 					($2) PASSWORD
-				        define uma senha de Criptografia
+				    define uma senha de Criptografia
 					
 					($3) LOGGING SYNCHRONOUS
 	        		        Sincronizar as Mensagens de Log na Tela
