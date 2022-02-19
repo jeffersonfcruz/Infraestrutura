@@ -1,0 +1,151 @@
+Entrar no GitHub
+Entrar no link
+https://github.com/vaamonde/senactat
+Clicar em Fork
+ 
+Voltar aos repositórios
+
+Acessar o repositório do Ubuntu 2004
+(Scripts originais para manter o Backup)
+https://github.com/vaamonde/ubuntu-2004
+
+Abrir o git no Linux e clonar os dois diretórios em pastas distintas
+
+Abrir \senactat\ubuntu\settings
+Dentro existe um arquivo “VSCode”
+Instruindo a configurar o Visual Studio Code
+
+Abrir a Pasta “senactat” no Visual Studio Code
+
+git config --global user.name “nome”
+git config --global user.email “email”
+git pull
+git status
+
+Para configuração do Script 01-openssh.sh
+
+Abrir o arquivo: 00-parametros.sh ir até
+
+Linha 53: UsuarioDefault= “usuário do webserver linux”
+Linha 56: SenhaDefault= “senha do webserver linux”
+Linha 59: NomeServer= “nome do servidor”
+Linha 63: DominioServer= “nome domínio”
+Linha 69: IPv4Server= “Endereço IPv4 do servidor”
+
+Ir até o diretório “\senactat\ubuntu\conf\ssh”
+•	sshd_config
+Linha 27: ListenAdress: “Endereço IPv4 do servidor”
+Linha 37/38: AuthenticationMethods: “publickey;password”
+(Modo de autenticação do ssh, pode ser somente chave pública, somente as credenciais, ou das duas formas, podem ser modificadas conforme a necessidade)
+	Linha 82: AllowUsers: “usuários autorizados”
+	Linha 88 AllowGroups: “grupos autorizados”
+•	shellinabox
+Linha 33: SHELLINABOX_ARGS="--no-beep --service=/:SSH:endereço IPv4 do servidor"
+
+
+
+Ir até o diretório “senactat\ubuntu\conf\ubuntu”
+•	00-installer_config
+Linha 30: addresses: “endereço IPv4 do servidor ubuntu/prefixo”
+	Linha 33: gateway4: “endereço IPv4 do firewall, no caso nosso gateway”
+	Linha 39: addresses: “endereço IPv4 do gateway”
+	Linha 45: Search: “nome do domínio”
+•	50-cloud-init.yaml (mesma configuração do 00-installer_config para dispositivos antigos)
+•	hostname
+Linha 1: “nome completo do servidor”
+•	hosts
+Linha 15-17: IPv4/FQDN/CNAME
+•	hosts.allow (permite as redes listadas a se autenticar nos serviços também listados)
+Linha 20: SSHD: “endereço IPv4 da rede”
+Linha 24: MYSQL: “endereço IPv4 da rede”
+Linha 28: TELNET: “endereço IPv4 da rede”
+Linha 32: FTP: “endereço IPv4 da rede”
+Linha 36: TFTP: “endereço IPv4 da rede”
+Linha 40-44: NFS: “endereço IPv4 da rede”
+•	issue.net (Banner da Conexão SSH)
+Alteração de acordo com o desejo do usuário
+
+Enviar as alterações para o seu GitHub no repositório “senactat”
+git add . && git commit && git push
+
+Conectar via ssh ao servidor Ubuntu, ou logar fisicamente
+
+Digitar o comando
+sudo localectl set-locale LANG=pt_BR.UTF-8 (mudar a linguagem)
+sudo timedateectl set-timezone “America/Sao_Paulo”️ (mudar a hora e localização)
+
+sudo -i (logar como root)
+clonar o diretório senactat no servidor
+git clone https://github.com/seu_usuario_no_github/senactat
+cd senactat\ubuntu\
+bash (script que quer executar, no caso “01-openssh.sh”)
+
+seguir as instruções do script, 
+caso seja necessário alterar algo entrar em modo de inserção apertando a tecla “insert”,
+para sair do modo de inserção apertar a tecla “esc”
+
+para sair e salvar apertar “ shift + : ” e depois em “x”, e dar enter
+para sair sem salvar apertar “ shift + : ” e depois em “q!” e dar enter
+ 
+Para configuração do script 07-lamp.sh
+
+Abrir o arquivo: 00-parametros.sh ir até
+
+Linha 309: SENHAMYSQL: ”senha do usuário do mysql”
+
+Acessar o diretório \senactat\ubuntu\conf\lamp
+•	apache2.conf
+Linha 19: “IPv4 do servidor”
+Linha 20: “hostname do servidor”
+Linha 21 “nome FQDN do servidor”
+•	teste.html 
+Alterar de acordo com o teste
+
+Acessar o webserver (SSH ou Remotamente)
+
+sudo -i
+cd senactat\
+git pull
+acessar o \ubuntu\
+bash (script que quer executar, no caso “07-lamp.sh”)
+
+seguir as instruções do script, 
+caso seja necessário alterar algo entrar em modo de inserção apertando a tecla “insert”,
+para sair do modo de inserção apertar a tecla “esc”
+
+para sair e salvar apertar “ shift + : ” e depois em “x”, e dar enter
+para sair sem salvar apertar “ shift + : ” e depois em “q!” e dar enter
+
+Executar os testes no navegador
+
+http://172.16.x.20/teste.html
+http://172.16.x.20/phpinfo.php️
+http://172.16.x.20/phpmyadmin️
+ 
+Para configuração do script 11-wordpress.sh
+
+Acessar o diretório senactat\ubuntu\conf\wordpress
+•	wordpress.conf
+Linha 19: serveradmin: “usuario@dominio”
+Linha 22: servername: “wp.dominio”
+Linha 23: serveralias “portal.dominio”
+
+Acessar o webserver (SSH ou Remotamente)
+
+sudo -i
+cd senactat\
+git pull
+acessar o \ubuntu\
+bash (script que quer executar, no caso “11-wordpress.sh”)
+
+seguir as instruções do script, 
+caso seja necessário alterar algo entrar em modo de inserção apertando a tecla “insert”,
+para sair do modo de inserção apertar a tecla “esc”
+
+para sair e salvar apertar “ shift + : ” e depois em “x”, e dar enter
+para sair sem salvar apertar “ shift + : ” e depois em “q!” e dar enter
+
+Executar os testes no navegador
+
+http://172.16.x.20/wp
+
