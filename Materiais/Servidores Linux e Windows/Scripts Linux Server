@@ -72,7 +72,7 @@ Conectar via ssh ao servidor Ubuntu, ou logar fisicamente
 
 Digitar o comando
 sudo localectl set-locale LANG=pt_BR.UTF-8 (mudar a linguagem)
-sudo timedateectl set-timezone “America/Sao_Paulo”️ (mudar a hora e localização)
+sudo timedatectl set-timezone “America/Sao_Paulo”️ (mudar a hora e localização)
 
 sudo -i (logar como root)
 clonar o diretório senactat no servidor
