@@ -1,0 +1,22 @@
+# Firewall NAT 
+1. Adicionar um “Separator” (Cor em Vermelho) 
+	- Add ⬆️ 
+Padrão até Destination **“WAN address”**
+**Destination port range:** “Other” para “Other” (portas customizadas para 4200) 
+**Redirect target IP:** Type: Single host 
+**Address:** webserver 
+**Redirect target port:** Other (porta customizada para 4200) 
+**Description:** Redirecionando a porta shell-in-a-box para o webserver 
+
+# Conectando via mstsc via vpn 
+Habilitar a conexão remota no Windows Server Desativando a ultima opção de autenticação no nível de rede
+
+# Firewall Aliases 
+	Adicionar um alias do Windows servidor vinculando ao IPv4. 
+# Firewall NAT
+Padrão até Destination **“WAN address”**
+**Destination port range:** “Other” para “Other” (portas customizadas para 3389) 
+**Redirect target IP:** Type: Single host 
+**Address:** (nome definido no “aliases” no caso windowsserver) 
+**Redirect target port:** Other (porta customizada para 3389) 
+**Description:** Redirecionando a porta windowsserver para o webserver
